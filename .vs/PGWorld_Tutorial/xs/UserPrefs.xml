@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{C03699E4-BBDE-8CD7-91AB-0ACA48466693}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Generator.cs">
+    <Files>
+      <File FileName="Assets/Scripts/TextureGenerator.cs" Line="50" Column="18" />
+      <File FileName="Assets/Scripts/Generator.cs" Line="23" Column="22" />
+      <File FileName="Assets/Scripts/Tile.cs" Line="15" Column="31" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="PGWorld_Tutorial" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Generator.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="62e89c26-329b-48c2-9bfd-94811e66262a" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
