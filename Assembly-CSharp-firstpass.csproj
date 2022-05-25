@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F9634DFD-D015-C0D1-A9C4-70934A3F48B0}</ProjectGuid>
+    <ProjectGuid>{CBBE52F9-070D-7D8B-4F1C-9026FDAEA8FC}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-firstpass</AssemblyName>
@@ -53,51 +53,51 @@
     <UnityVersion>2021.3.3f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="/Applications/Visual Studio.app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
+    <Analyzer Include="/Applications/Visual Studio (2019).app/Contents/Resources/lib/monodevelop/AddIns/MonoDevelop.Unity/Analyzers/Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets/Plugins/AccidentalNoise/Cache.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBlend.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitLog.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSphere.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitFractal.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCombiner.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitConstant.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTiers.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBias.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitClamp.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/MappingRanges.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitScaleOffset.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBrightContrast.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitScaleDomain.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/CellularGenerator.cs" />
-    <Compile Include="Assets/Plugins/MathHelper.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitModuleBase.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSin.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitFloor.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitGradient.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitAutoCorrect.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/NoiseLookupTable.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSphere.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/CellularGenerator.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitRotateDomain.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBlend.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/MappingRanges.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/CombinerType.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCos.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitGain.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/CellularCache.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCeiling.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitPow.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCache.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBias.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Mapping.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTan.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/BasisType.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/FractalType.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBasisFunction.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitLog.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCache.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitFractal.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCeiling.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Enums/InterpolationType.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitInvert.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/MappingMode.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCellular.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/CombinerType.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs" />
-    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSelect.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitClamp.cs" />
     <Compile Include="Assets/Plugins/AccidentalNoise/Noise.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSin.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCombiner.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTiers.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitPow.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitConstant.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitSelect.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitInvert.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/CellularCache.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/BasisType.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBrightContrast.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitTan.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/NoiseLookupTable.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Cache.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitScaleDomain.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitCellular.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitModuleBase.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/FractalType.cs" />
+    <Compile Include="Assets/Plugins/MathHelper.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitBasisFunction.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitFloor.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Implicit/ImplicitGradient.cs" />
+    <Compile Include="Assets/Plugins/AccidentalNoise/Enums/MappingMode.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

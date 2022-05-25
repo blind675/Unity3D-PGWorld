@@ -48,6 +48,10 @@ public static class TextureGenerator
                         pixels[x + y * width] = SnowColor;
                         break;
                 }
+
+                //darken the color if a edge tile
+                if (tiles[x, y].Bitmask != 15)
+                    pixels[x + y * width] = Color.Lerp(pixels[x + y * width], Color.black, 0.4f);
             }
         }
 

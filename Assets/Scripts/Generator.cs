@@ -1,13 +1,14 @@
 using UnityEngine;
 using AccidentalNoise;
+using System.Collections.Generic;
 
 public class Generator : MonoBehaviour
 {
     // Adjustable variables for Unity Inspector
     [SerializeField]
-    int Width = 256;
+    int Width = 500;
     [SerializeField]
-    int Height = 256;
+    int Height = 500;
     [SerializeField]
     int TerrainOctaves = 6;
     [SerializeField]
@@ -39,6 +40,9 @@ public class Generator : MonoBehaviour
     public GameObject plane;
     MeshRenderer HeightMapRenderer;
 
+    List<TileGroup> Waters = new List<TileGroup>();
+    List<TileGroup> Lands = new List<TileGroup>();
+
     void Start()
     {
         // Get the mesh we are rendering our output to
@@ -52,6 +56,10 @@ public class Generator : MonoBehaviour
 
         // Build our final objects based on our data
         LoadTiles();
+
+        UpdateNeighbors();
+        UpdateBitmasks();
+        FloodFill();
 
         // Render a texture representation of our map
         HeightMapRenderer.materials[0].mainTexture = TextureGenerator.GetTexture(Width, Height, Tiles);
@@ -161,4 +169,126 @@ public class Generator : MonoBehaviour
         }
     }
 
+    private void UpdateNeighbors()
+    {
+        for (var x = 0; x < Width; x++)
+        {
+            for (var y = 0; y < Height; y++)
+            {
+                Tile t = Tiles[x, y];
+
+                t.Top = GetTop(t);
+                t.Bottom = GetBottom(t);
+                t.Left = GetLeft(t);
+                t.Right = GetRight(t);
+            }
+        }
+    }
+
+    private void UpdateBitmasks()
+    {
+        for (var x = 0; x < Width; x++)
+        {
+            for (var y = 0; y < Height; y++)
+            {
+                Tiles[x, y].UpdateBitmask();
+            }
+        }
+    }
+
+    private void FloodFill()
+    {
+        // Use a stack instead of recursion
+        Stack<Tile> stack = new Stack<Tile>();
+
+        for (int x = 0; x < Width; x++)
+        {
+            for (int y = 0; y < Height; y++)
+            {
+
+                Tile t = Tiles[x, y];
+
+                //Tile already flood filled, skip
+                if (t.FloodFilled) continue;
+
+                // Land
+                if (t.Collidable)
+                {
+                    TileGroup group = new TileGroup();
+                    group.Type = TileGroupType.Land;
+                    stack.Push(t);
+
+                    while (stack.Count > 0)
+                    {
+                        FloodFill(stack.Pop(), ref group, ref stack);
+                    }
+
+                    if (group.Tiles.Count > 0)
+                        Lands.Add(group);
+                }
+                // Water
+                else
+                {
+                    TileGroup group = new TileGroup();
+                    group.Type = TileGroupType.Water;
+                    stack.Push(t);
+
+                    while (stack.Count > 0)
+                    {
+                        FloodFill(stack.Pop(), ref group, ref stack);
+                    }
+
+                    if (group.Tiles.Count > 0)
+                        Waters.Add(group);
+                }
+            }
+        }
+    }
+
+
+    private void FloodFill(Tile tile, ref TileGroup tiles, ref Stack<Tile> stack)
+    {
+        // Validate
+        if (tile.FloodFilled)
+            return;
+        if (tiles.Type == TileGroupType.Land && !tile.Collidable)
+            return;
+        if (tiles.Type == TileGroupType.Water && tile.Collidable)
+            return;
+
+        // Add to TileGroup
+        tiles.Tiles.Add(tile);
+        tile.FloodFilled = true;
+
+        // floodfill into neighbors
+        Tile t = GetTop(tile);
+        if (!t.FloodFilled && tile.Collidable == t.Collidable)
+            stack.Push(t);
+        t = GetBottom(tile);
+        if (!t.FloodFilled && tile.Collidable == t.Collidable)
+            stack.Push(t);
+        t = GetLeft(tile);
+        if (!t.FloodFilled && tile.Collidable == t.Collidable)
+            stack.Push(t);
+        t = GetRight(tile);
+        if (!t.FloodFilled && tile.Collidable == t.Collidable)
+            stack.Push(t);
+    }
+
+    private Tile GetTop(Tile t)
+    {
+        return Tiles[t.X, MathHelper.Mod(t.Y - 1, Height)];
+    }
+    private Tile GetBottom(Tile t)
+    {
+        return Tiles[t.X, MathHelper.Mod(t.Y + 1, Height)];
+    }
+    private Tile GetLeft(Tile t)
+    {
+        return Tiles[MathHelper.Mod(t.X - 1, Width), t.Y];
+    }
+    private Tile GetRight(Tile t)
+    {
+        return Tiles[MathHelper.Mod(t.X + 1, Width), t.Y];
+    }
 }
