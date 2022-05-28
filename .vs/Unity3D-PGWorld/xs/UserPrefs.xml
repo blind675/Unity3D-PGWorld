@@ -1,28 +1,39 @@
 ﻿<Properties StartupConfiguration="{05810747-7BD1-C7E6-BF65-02B226756E68}|">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="bc79dff6-604e-49a1-80a5-362e0a4b9443" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Generator.cs">
     <Files>
-      <File FileName="Assets/Scripts/Tile.cs" Line="26" Column="29" />
-      <File FileName="Assets/Scripts/Generator.cs" Line="62" Column="21" />
-      <File FileName="Assets/Scripts/TextureGenerator.cs" />
+      <File FileName="Assets/Scripts/Tile.cs" Line="199" Column="1" />
+      <File FileName="Assets/Scripts/Generator.cs" Line="116" Column="58" />
+      <File FileName="Assets/Scripts/TextureGenerator.cs" Line="166" Column="2" />
       <File FileName="Assets/Scripts/TileGroup.cs" Line="10" Column="2" />
+      <File FileName="Assets/Scripts/River.cs" Line="39" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="Unity3D-PGWorld" expanded="True">
-            <Node name="Assets" expanded="True" selected="True">
-              <Node name="Scripts" expanded="True" />
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="Generator.cs" selected="True" />
+              </Node>
             </Node>
           </Node>
         </State>
       </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="Unity" selected="True" />
+        </State>
+      </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="a8ce7dad-bb6c-4b8a-bb5b-2cffffcc2452" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
 </Properties>
